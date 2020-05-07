@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        body {
+            background-image: url('green.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>C language family</h1>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="c.html">C language</a> |
+        <a href="cpp.html">C++ language</a> |
+        <a href="swift.html">Swift language</a>
+    </nav>
+
+    <a href="https://img.icons8.com/color/480/000000/c-programming.png"><img
+            src="https://img.icons8.com/color/48/000000/c-programming.png" /></a>
+
+    <section>
+        <table>
+            <caption>
+                <details>This table details their creators, release dates and wether they are still active.</details>
+                <summary>
+                    Amongst others the languages of the C language family are C, C++ and Swift.
+                </summary>
+            </caption>
+
+            <caption>Language details</caption>
+            <tr>
+                <th></th>
+                <th>C</th>
+                <th>C++</th>
+                <th>Swift</th>
+            </tr>
+            <tr>
+                <td>Creator</td>
+                <td>Dennis Ritchie</td>
+                <td>Bjarne Stroustrup</td>
+                <td>Chris Lattner</td>
+            </tr>
+            <tr>
+                <td>Release</td>
+                <td>1972</td>
+                <td>1985</td>
+                <td>2014</td>
+            </tr>
+            <tr>
+                <td>Still active</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+
+        </table>
+    </section>
+    <hr>
+    <section>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="message">Message:</label><br>
+            <textarea name="message" form="message">Enter message here...</textarea><br>
+            <label for="kind">What kind of message are you sending?</label><br>
+            <input type="radio" id="general" name="kind" value="general">
+            <label for="male">General</label><br>
+            <input type="radio" id="complaint" name="kind" value="complaint">
+            <label for="female">Complatint</label><br>
+            <br>
+            <input type="checkbox" id="notrobot" name="notrobot" value="notrobot">
+            <label for="vehicle1">I'm not a robot.</label><br>
+            <br>
+            <input type="reset">
+            <input type="submit">
+        </form>
+    </section>
+    <hr>
+    <section>
+        <p>
+            This is a video to showcase the video tag. Other videos are from youtube so I cannot use the video tag
+            there.
+        </p>
+        <video width="320" height="240" controls>
+            <source src="mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <footer>
+        <br><br><br><br><br>
+        <button onclick="myFunction()">Bigger font</button>
+        <p>Creator: Kristof Kocsis (TNC0NG)</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            txt = document.getElementById('a');
+            style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+            currentSize = parseFloat(style);
+            txt.style.fontSize = (currentSize + 100) + 'px';
+        }
+    </script>
+</body>
+
+</html>
