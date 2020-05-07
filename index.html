@@ -4,48 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home - C family</title>
 
-    <style>
-        body {
-            background-image: url('green.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>C language family</h1>
 
     <nav>
-        <a href="index.html">Home</a> |
+        <a href="index.html">HOME</a> |
         <a href="c.html">C language</a> |
         <a href="cpp.html">C++ language</a> |
         <a href="swift.html">Swift language</a>
     </nav>
-
-    <a href="https://img.icons8.com/color/480/000000/c-programming.png"><img
-            src="https://img.icons8.com/color/48/000000/c-programming.png" /></a>
-
+    <br>
+    <section>
+        Languages in the language family
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Swift</li>
+        </ul>
+    </section>
     <section>
         <table>
             <caption>
@@ -87,29 +68,28 @@
     <section>
         <form>
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
+            <input type="text" id="name" name="name" maxlength="20"><br>
             <label for="message">Message:</label><br>
-            <textarea name="message" form="message">Enter message here...</textarea><br>
+            <textarea name="message" id="message" form="message" maxlength="400">Enter message here...</textarea><br>
             <label for="kind">What kind of message are you sending?</label><br>
             <input type="radio" id="general" name="kind" value="general">
-            <label for="male">General</label><br>
+            <label for="general">General</label><br>
             <input type="radio" id="complaint" name="kind" value="complaint">
-            <label for="female">Complatint</label><br>
+            <label for="complaint">Complatint</label><br>
             <br>
             <input type="checkbox" id="notrobot" name="notrobot" value="notrobot">
             <label for="vehicle1">I'm not a robot.</label><br>
             <br>
             <input type="reset">
-            <input type="submit">
+            <input type="submit" onclick="submitForm()">
         </form>
     </section>
     <hr>
     <section>
         <p>
-            This is a video to showcase the video tag. Other videos are from youtube so I cannot use the video tag
-            there.
+            This is a video to showcase the video tag. Other videos are from youtube so I cannot use the video tag there.
         </p>
-        <video width="320" height="240" controls>
+        <video width="320" height="240" controls poster="poster.png">
             <source src="mov_bbb.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -127,6 +107,12 @@
             style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
             currentSize = parseFloat(style);
             txt.style.fontSize = (currentSize + 100) + 'px';
+        }
+
+        function submitForm() {
+            name = document.getElementById("name").value;
+            message = document.getElementById("message").value;
+            alert(name + "\n" + message);
         }
     </script>
 </body>
